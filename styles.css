@@ -1,0 +1,1416 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-image: url("backgroundimgmain.jpg");
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-attachment: fixed; /* Fix the background image in place */
+}
+
+.hero {
+    /* background-image: url("backgroundimgmain.jpg");
+    background-size: cover; /* Cover the entire section 
+    background-position: center; Center the background image */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Ensure positioning context */
+}
+
+/* Navbar styling */
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    margin-right: 10px;
+  }
+  
+  #navbar-brand {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 900;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+  }
+  
+  .nav-links a:hover {
+    color: #29e6bd;
+    text-decoration: double;
+  }
+  
+  /* Dropdown styles */
+  .dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .nav-text {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-text p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    color: white;
+  }
+  
+  /* Mobile menu button */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    background-color: white;
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 768px) {
+    .nav-links2 {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .nav-links li {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .nav-links2.show {
+      display: flex;
+    }
+  }
+  
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* height: rem; Ensure the content takes the full height */
+    /* width: 80rem; */
+}
+
+.middle-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem; /* Space between elements */
+    width: 40rem;
+    position: relative; /* Ensure positioning context for child elements */
+    z-index: 2; /* Ensure content is above the background and planets */
+    margin-top: 2rem;
+}
+
+.middle-box h1 {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 6rem;
+    color: #ffffff;
+}
+
+.middle-box p {
+    color: white;
+    max-width: 50rem; /* Limit the width of the paragraph */
+    font-size: .8rem;
+}
+
+#learn-more {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(315deg, #CD1013 1.19%, #FF0004 1.5%, #2500FF 94.46%);
+    border-radius: 0.5rem;
+    padding: 1.5rem 2rem;
+    width: 12rem;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+#learn-more:hover {
+    background: rgb(255, 0, 0);
+    background: linear-gradient(315deg, #FF0004 1.19%, #CD1013 1.5%, #2500FF 94.46%);
+}
+
+#learn-more a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.planet {
+    position: absolute;
+    z-index: 1; /* Ensure planets are above the background but below the text */
+}
+
+.hero-mercury { top: 10%; left: 0%; width: 6rem; height: auto; }
+
+.hero-saturn { top: 30%; left: 0%; width: 12rem; height: auto; }
+
+.hero-neptune { top: 86.4%; left: 0%; width: 5rem; height: auto; }
+
+.hero-venus { right: 0%; top: 10%; width: 8rem; height: auto; }
+
+.hero-jupiter { top: 62.5%; right: 0%; width: 15.6rem; height: auto; }
+
+.hero-earth { top: 20%; left: 52%; width: 7.5rem; height: auto; transform: translate(-50%, -50%);z-index: 0; }
+
+.hero-moon { left: 46%; bottom: 0%; width: 6rem; height: auto; }
+
+.hero-uranus{ left: 21%; top: 50%; width: 5rem; height: auto; }
+
+@media screen and (min-width: 1440px){
+    .hero-jupiter { top: 59.6%; right: 0%; width:22rem; height: auto; }
+
+    .hero-mercury { top: 7%; left: 0%; width: 8rem; height: auto; }
+
+    .hero-saturn { top: 30%; left: 0%; width: 15rem; height: auto; }
+
+    .hero-neptune { top: 83.6%; left: 0%; width: 8rem; height: auto; }
+
+    .hero-venus { right: 0%; top: 9%; width: 14rem; height: auto; }
+
+    .hero-earth { top: 20%; left: 52%; width: 7.5rem; height: auto; transform: translate(-50%, -50%);z-index: 0; }
+
+    .hero-moon { left: 44%; bottom: 0%; width: 15%; height: auto; }
+
+    .hero-uranus{ left: 27%; top: 50%; width: 5rem; height: auto; }
+
+    #learn-more {
+        padding: 1.5rem 2rem;
+        width: 14rem;
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .middle-box p {
+        max-width: 60rem; /* Limit the width of the paragraph */
+        font-size: 1rem;
+    }
+
+    .middle-box h1 {
+        font-size: 4rem;
+        line-height: 6rem;
+    }
+
+}
+
+@media screen and (max-width: 1024px){
+    .hero-jupiter { top: 66%; right: 0%; width:25%; height: auto; }
+
+    .hero-saturn { top: 30%; left: 0%; width: 18%; height: auto; }
+
+    .hero-venus { right: 0%; top: 10%; width: 16%; height: auto; }
+
+    .hero-neptune { top: 84.5%; left: 0%; width: 10%; height: auto; }
+
+    .hero-uranus{ left: 24%; top: 45%; width: 9%; height: auto; }
+
+    .hero-moon { left: 43%; bottom: 0%; width: 15%; height: auto; }
+
+    .earth-card{
+        width: 4rem;
+    }
+
+}
+
+@media screen and (max-width:768px){
+    .hero-saturn { top: 35%; left: 0%; width: 15%; height: auto; }
+
+    .hero-moon { left: 43%; bottom: 0%; width: 11%; height: auto; }
+
+    .hero-jupiter { top: 68.5%; right: 0%; width:23%; height: auto; }
+
+    .hero-venus { right: 0%; top: 10%; width: 14%; height: auto; }
+
+    .hero-mercury { top: 7%; left: 0%; width: 10%; height: auto; }
+
+    .hero-earth { top: 20%; left: 52%; width: 12%; height: auto; transform: translate(-50%, -50%);z-index: 0; }
+
+    #learn-more {
+        padding: 1.5rem 2rem;
+        width: 11rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .middle-box p {
+        max-width: 60rem; /* Limit the width of the paragraph */
+        font-size: 0.8rem;
+    }
+
+    .middle-box h1 {
+        font-size: 2.5rem;
+        line-height: 4rem;
+    }
+
+    .middle-box{
+        width: 35rem;
+    }
+}
+
+@media screen and (max-width: 426px){
+    .middle-box{
+        width: 15rem;
+    }
+
+    .middle-box h1 {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    .middle-box p {
+        max-width: 60rem; /* Limit the width of the paragraph */
+        font-size: 0.6rem;
+    }
+
+    #learn-more {
+        padding: 1rem 1rem;
+        width: 9rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    #learn-more a {
+        font-size: 0.8rem;
+    }
+
+    .hero-jupiter { top: 82.5%; right: 0%; width:23%; height: auto; }
+
+    .hero-neptune { top: 89%; left: 0%; width: 13%; height: auto; }
+
+    .hero-mercury { top: 9%; left: 0%; width: 10%; height: auto; }
+
+    #navbar-brand{
+        font-size: large;
+    }
+}
+.sun {
+    height:max-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.sun-content{
+    display: flex;
+    flex-direction: column;
+    height:max-content;
+    color: white;
+}
+#sun-image{
+    width: 98.7vw;
+    height: auto;
+}
+
+.sun-text{
+    margin-left: 3rem;
+    width: 60vw;
+}
+
+.sun-text h1{
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+}
+.sun-text h5{
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.sun-card1 h5{
+    text-align:justify;
+    margin-left: 2.3rem;
+}
+
+.sun-card2 h5{
+    text-align:center;
+    margin-left: 3.9rem;
+}
+
+.suncards{
+    display: flex;
+    gap: 2rem;
+    /* justify-content: space-between;
+    gap: 2rem;
+    margin-top: 1rem; */
+}
+
+.sun-card1,.sun-card2{
+    display: flex;
+    background: radial-gradient(110.92% 172.47% at 91.09% 101.78%, #430E49 0.53%, #370D44 32.06%, #170B36 89.03%, #100A33 100%);
+    border: 4px solid;
+    border-image-source: radial-gradient(110.92% 172.47% at 91.09% 101.78%, #170B36 0%, #100A33 11.98%, #370D44 46.35%, #430E49 89.06%);
+    border-radius: 20px;
+    height: 8rem;
+    width: 20rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.sun-card1 h2{
+    margin-left: 2rem;
+}
+
+.suncards h2{
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.suncard1img{
+    margin-left: 1.5rem;
+}
+.suncard2img{
+    margin-left: 2.5rem;
+}
+
+@media screen and (max-width:768px){
+    .sun p{
+        font-size: 0.8rem;
+    }
+
+    .sun h2{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .sun-card1,.sun-card2{
+        height: 6rem;
+        width: 16rem;
+    }
+
+    #sun-card1-img{
+        width: 180%;
+        height: auto;
+        margin-right: 2rem;
+    }
+    #sun-card2-img{
+        width: 150%;
+        height: auto;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width:426px){
+    .suncards{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+
+    #sun-card1-img{
+        width: 70%;
+        height: auto;
+        margin-right: 1rem;
+    }
+    #sun-card2-img{
+        width: 150%;
+        height: auto;
+        margin-right: 1rem;
+    }
+}
+
+.mercury{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: max-content;
+    width: 100vw;
+    justify-content: space-between;
+    /* border: 2px solid plum; */
+}
+@media screen and (max-width:900px) {
+    .mercury{
+        grid-template-columns: 1fr;
+    }
+    .mercury-content{
+        justify-self: center;
+        width: 80vw;
+    }
+}
+
+.mercury-content{
+    /* background-color: green; */
+    color: white;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width:900px) {
+    .mercury-content{
+        margin-top: 2rem;
+        justify-self: center;
+        width: 80vw;
+    }
+}
+
+.merc-cards h2{
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+.merc-card1,.merc-card2,.merc-card3{
+    display: flex;
+    background: radial-gradient(110.92% 172.47% at 91.09% 101.78%, #430E49 0.53%, #370D44 32.06%, #170B36 89.03%, #100A33 100%);
+    border: 4px solid;
+    border-image-source: radial-gradient(110.92% 172.47% at 91.09% 101.78%, #170B36 0%, #100A33 11.98%, #370D44 46.35%, #430E49 89.06%);
+    border-radius: 20px;
+    height: 7rem;
+    width: 18rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+    justify-content: space-around;
+    padding: 0.5rem;
+}
+
+.merc-text h1{
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+}
+.mercury-content h5{
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+.sun-card1 h5{
+    text-align:justify;
+    margin-left: 2.3rem;
+}
+
+.sun-card2 h5{
+    text-align:justify;
+    margin-left: 3.9rem;
+}
+.merc-cards {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (min-width: 900px) and (max-width: 1223px) {
+    .merc-cards {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .merc-cards {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #merc_img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.venus{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: max-content;
+    width: 100vw;
+    justify-content: space-between;
+    /* border: 2px solid plum; */
+}
+@media screen and (max-width:590px) {
+    .venus{
+        grid-template-columns:1fr;
+    }
+    .venus-content{
+        justify-self: center;
+        width: 80vw;
+        order: 2;
+    }
+
+    .venusimg{
+        order: 1;
+        align-self: start;
+        justify-self: end;
+        margin-bottom: 4rem;
+    }
+    /* #venus-img{
+        width: 70vw;
+        height: auto; not applying
+    } */
+}
+.venus-content{
+    /* background-color: green; */
+    padding: 2rem;
+    color: white;
+    width: 50vw ;
+}
+.venus-text{
+    margin-top: 4rem;
+}
+.venus-text h1{
+    font-family: "Orbitron", sans-serif;
+    font-weight: 900;
+}
+.venus-cards h5{
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.venus-cards h2{
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+#venus-img{
+    height: auto;
+    width: 50vw;
+    /* right: 100%; */
+}
+.venusimg{
+    /* position: absolute;
+    top: 50%;
+    transform: translateY(-50%); */
+    align-self: start;
+    justify-self: end;
+    /* background-color: red; */
+    width: 50vw;
+    height: auto;
+}
+.venus-cards{
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 3rem;
+}
+
+.venus-card1,.venus-card2{
+    display: flex;
+    background: radial-gradient(110.92% 172.47% at 91.09% 101.78%, #430E49 0.53%, #370D44 32.06%, #170B36 89.03%, #100A33 100%);
+    border: 4px solid;
+    border-image-source: radial-gradient(110.92% 172.47% at 91.09% 101.78%, #170B36 0%, #100A33 11.98%, #370D44 46.35%, #430E49 89.06%);
+    border-radius: 20px;
+    height: 7rem;
+    width: 16rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+    justify-content: space-around;
+    padding: 0.5rem;
+}
+
+@media screen and (max-width: 1150px) {
+    .venus-cards{
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #venus-img{
+        width: 120%;
+        height: auto;
+    }
+}
+
+.earth{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    /* grid-template-rows: repeat(2,1fr); */
+    height: max-content;
+    width: 100vw;
+    /* justify-content: space-between; */
+    /* border: 2px solid plum; */
+    color: white;
+    z-index: 1;
+}
+
+.earth-upper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-around;
+    color: white;
+    padding: 4rem;
+    height: max-content;
+    margin-bottom: 5rem;
+    /* background-color: green; */
+}
+
+.earth-card{
+    display: flex;
+    background: radial-gradient(110.92% 172.47% at 91.09% 101.78%, #430E49 0.53%, #370D44 32.06%, #170B36 89.03%, #100A33 100%);
+    border: 4px solid;
+    border-image-source: radial-gradient(110.92% 172.47% at 91.09% 101.78%, #170B36 0%, #100A33 11.98%, #370D44 46.35%, #430E49 89.06%);
+    border-radius: 20px;
+    height: 7rem;
+    width: 17rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+    justify-content: space-around;
+    padding: 0.5rem;
+    justify-self: center;
+}
+
+.earth-text h1{
+    font-family: "Orbitron", sans-serif;
+    font-weight: 900;
+}
+.earth-card h5{
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.earth-card h2{
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+.earth-lower{
+    display: flex;
+    height: max-content;
+    position: relative;
+    z-index: 2;
+}
+.moon-text{
+    display: flex;
+    flex-direction: column;
+    
+}
+.moon-text h3{
+    font-family: "Orbitron", sans-serif;
+    font-weight: 900;
+    align-self: flex-end;
+}
+/* .rocket{
+    background-color: green;
+    align-self: center;
+} */
+ .earth-moon{
+    position: relative;
+    z-index: 3;
+ }
+ #rocket{
+    height: auto;
+    width: auto;
+    top: 40%;
+    z-index: 4;
+    position: absolute;
+ }
+
+.earth-moon{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+.moon{
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    /* top: 1%; */
+    position: absolute;
+    width: 60vw;
+    padding-left: 2rem;
+    margin-bottom: 5rem;
+}
+.earth-moon-img{
+    margin-top: 5rem;
+    z-index: 5;
+}
+.arrow{
+    /* top: 10%;
+    right: 0%;
+    position: absolute; */
+    z-index: 6;
+}
+
+@media screen and (max-width: 1024px) {
+    .earth-upper{
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    #earthimg{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:426px){
+    .earth-upper{
+        grid-template-columns: repeat(1,1fr);
+        margin-bottom: 3rem;
+    }
+
+    .earth-card{
+        margin-top: 2rem;
+        width: 13rem;
+        height: 6rem;
+    }
+
+    .earth-card h2{
+        font-size: large;
+    }
+
+    .earth-card img{
+        width: 80%;
+    }
+
+    .moon-text{
+        width: 30rem;
+    }
+
+    .moon-text p{
+        font-size: 0.6rem;
+    }
+
+    #rocket{
+        display: none;
+    }
+    #arrow{
+        width: 130%;
+    }
+
+    .moon{
+        width: 70vw;
+        margin-right: 2rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.mars{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    height: max-content;
+    width: 100vw;
+    gap: 5rem;
+    /* border: 2px solid plum; */
+    color: white;
+    z-index: 1;
+}
+
+.mars-cards{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 3rem;
+}
+
+.mars-card1,.mars-card2,.mars-card3{
+    display: flex;
+    background: radial-gradient(110.92% 172.47% at 91.09% 101.78%, #430E49 0.53%, #370D44 32.06%, #170B36 89.03%, #100A33 100%);
+    border: 4px solid;
+    border-image-source: radial-gradient(110.92% 172.47% at 91.09% 101.78%, #170B36 0%, #100A33 11.98%, #370D44 46.35%, #430E49 89.06%);
+    border-radius: 20px;
+    height: 7rem;
+    width: 16rem;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    text-align: center;
+    justify-content: space-around;
+    padding: 0.8rem;
+}
+
+.mars-cards h5{
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.mars-cards h2{
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.mars-moon{
+    display: flex;
+    position: relative;
+}
+.mars-moon-text{
+     display: flex;
+    align-self: center;
+    gap: 1rem;
+    position: absolute;
+    top: 18%;
+    left: 54%;
+    text-align: start;
+    /* background-color: green; */
+}
+
+.mars-text h1,.mars-moon-text h2{
+    font-family: "Orbitron",sans-serif;
+    font-weight: 900;
+}
+
+.mars p{
+    font-size: 0.8rem;
+}
+
+.mars-text{
+    padding: 4rem;
+    margin: 1rem;
+}
+
+@media screen and (max-width: 1024px){
+    .mars{
+        grid-template-columns: 60% 40%;
+    }
+
+    #mars-img{
+        width: 70%;
+        height: auto;
+    }
+    
+}
+
+@media screen and (max-width:768px){
+    .mars-card1,.mars-card2,.mars-card3{
+        width: 14rem;
+        height: 6rem;
+    }
+
+    #mars-card1-img{
+        width: 80%;
+    }
+
+    #mars-card2-img,#mars-card3-img{
+        width: 90%;
+    }
+
+    .mars h5{
+        font-size: 0.6rem;
+    }
+
+    .mars h2{
+        font-size: 1.2rem;
+    }
+
+    .mars-moon-text{
+       top: 16%;
+       left: 58%;
+       text-align: start;
+       /* background-color: green; */
+   }
+}
+
+@media screen and (max-width:426px){
+    .mars{
+        grid-template-columns: 100%;
+    }
+
+    .mars-cards{
+        justify-items: center;
+    }
+}
+
+.jupiter{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 5rem;
+    height: max-content;
+    width: 100vw;
+    justify-content: space-between;
+    /* border: 2px solid plum; */
+    color: #ffffff;
+}
+
+.jupiter h1{
+    font-family: "Orbitron",sans-serif;
+    font-weight: 900;
+}
+
+.jupiter-content{
+    /* background-color: green; */
+    padding: 5rem;
+}
+.jupiter-img{
+    /* background-color: red; */
+    display: flex;
+    justify-content: flex-end;
+}
+#jupiter-img{ 
+    width:80%;
+    height: auto;
+}
+
+.jupiter-cards{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 3rem;
+}
+
+.jupiter-card1,.jupiter-card2,.saturn-card1,.saturn-card2,.uranus-card1, .uranus-card2,.neptune-card1,.neptune-card2{
+    display: flex;
+    background: radial-gradient(110.92% 172.47% at 91.09% 101.78%, #430E49 0.53%, #370D44 32.06%, #170B36 89.03%, #100A33 100%);
+    border: 4px solid;
+    border-image-source: radial-gradient(110.92% 172.47% at 91.09% 101.78%, #170B36 0%, #100A33 11.98%, #370D44 46.35%, #430E49 89.06%);
+    border-radius: 20px;
+    height: 7rem;
+    width: 16rem;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    text-align: center;
+    justify-content: space-around;
+    padding: 0.8rem;
+}
+
+.jupiter-cards h5{
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.jupiter-cards h2{
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+@media screen and (max-width:768px){
+    #jupiter-image{ 
+        width:150%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:426px){
+    .jupiter{
+        grid-template-columns: 1fr;
+    }
+
+    #jupiter-image{
+        width: 100%;
+    }
+}
+
+.saturn{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+    height: max-content;
+    width: 100vw;
+    justify-content: space-between;
+    /* border: 2px solid plum; */
+    color: #ffffff;
+}
+
+.saturn-content{
+    padding: 5rem;
+}
+.saturn-cards{
+    margin-left: 3rem;
+    gap: 3rem;
+    /* margin-top: 2rem; */
+    padding: 2rem;
+    display: grid;
+    place-items: center;
+}
+
+.saturn-cards h5{
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.saturn-cards h2{
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+.saturn-img{
+    display: flex;
+    align-items: center;
+}
+#saturn-image{
+    width: 150%;
+}
+.saturn-text{
+    padding: 3rem;
+}
+.saturn h1{
+    font-family: "Orbitron", sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: end;
+}
+
+@media screen and (max-width:768px) {
+    .saturn-card1,.saturn-card2{
+        width: 14rem;
+    }
+}
+
+@media screen and (max-width:426px) {
+
+    .saturn{
+        grid-template-columns: 1fr;
+    }
+
+    #saturn-image{
+        width: 80%;
+    }
+
+    .saturn h1{
+        text-align: start;
+    }
+
+    .saturn-cards{
+        justify-items: center;
+    }
+
+    .saturn-content{
+        display: grid;
+        justify-items: center;
+    }
+}
+
+.uranus {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 5rem;
+    width: 100vw;
+    /* border: 2px solid plum; */
+    color: #ffffff;
+}
+
+.uranus-content {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.uranus-cards {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+}
+
+.uranus-cards h5 {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.uranus-cards h2 {
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.uranus-text {
+    padding-top: 2rem;
+}
+
+.uranus-text h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: start;
+}
+
+.uranus-img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#uranus-image {
+    max-width: 100%;
+    height: auto; 
+    object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+    .uranus-cards{
+        grid-template-columns: repeat(1,1fr);
+
+    }
+}
+
+@media screen and (max-width:426px){
+    .uranus-content{
+        grid-template-columns: 1fr;
+    }
+}
+
+.neptune{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    width: 100vw;
+    /* border: 2px solid plum; */
+    color: #ffffff;
+    position: relative;
+}
+
+.neptune h1{
+    font-family: "Orbitron", sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.neptune p{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+.neptune-cards {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+}
+
+.neptune-cards h5 {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.neptune-cards h2 {
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+#neptune-img{
+    /* position: absolute; */
+    width: 90%;
+    top: 0%;
+}
+
+#nept-lower{
+    width: 94.5%;
+}
+
+.footer-div{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.footer-data{
+    background-color: rgba(30, 30, 30, 1);
+    width: 80%;
+    border-radius: 1.5rem;
+    height: max-content;
+    padding: 2rem;
+    justify-self: center;
+    position: absolute;
+    left: 10%;
+    bottom: 12%;
+}
+
+.footer-text{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-data h2{
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 900;
+    font-size: xx-large;
+}
+
+.email-div{
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 50%;
+    margin-top: 3rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* justify-self: center;
+    align-self: flex-start; */
+}
+
+.email-input{
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    outline: none;
+    flex: 1;
+}
+
+.subscribe-button{
+    background: linear-gradient(45deg, #ff005e, #ff00ff);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    border-radius: 0 30px 30px 0;
+    transition: background 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background: linear-gradient(45deg, #ff00ff, #ff005e);
+}
+
+.subscribe-button::after {
+    content: "→";
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Align items vertically centered */
+    width: 100%;
+    margin-top: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+    #footer-p{
+        display: none;
+    }
+
+    #merc{
+        display: none;
+    }
+}
+
+
+
